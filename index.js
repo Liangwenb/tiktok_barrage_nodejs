@@ -117,9 +117,9 @@ const Barrage = class {
             user_fansLevel: this.getLevel(user.badgeImageList, 7),
             user_id: user.id,
             user_nickName: user.nickname,
-            user_avatar: user.avatarThumb.urlList[0],
+            user_avatar: user.avatar_thumb.url_list[0],
             user_gender: user.gender === 1 ? '男' : '女',
-            user_isAdmin: user.userAttr.isAdmin,
+            // user_isAdmin: user.userAttr.isAdmin,
             user_fansLightName: "",
             user_levelImage: ""
         }
@@ -144,12 +144,12 @@ const Barrage = class {
         }
         let msg = dom[this.propsId].children.props.message.payload
         let result = {
-            repeatCount: null,
+            repeat_count: null,
             gift_id: null,
             gift_name: null,
             gift_number: null,
             gift_image: null,
-            gift_diamondCount: null,
+            gift_diamond_count: null,
             gift_describe: null,
         }
 
@@ -164,9 +164,9 @@ const Barrage = class {
                     gift_id: msg.gift.id,
                     gift_name: msg.gift.name,
                     // gift_number: parseInt(msg.comboCount),
-                    gift_number: parseInt(msg.repeatCount),
-                    gift_image: msg.gift.icon.urlListList[0],
-                    gift_diamondCount: msg.gift.diamondCount,
+                    gift_number: parseInt(msg.repeat_count),
+                    gift_image: msg.gift.icon.url_list[0],
+                    gift_diamond_count: msg.gift.diamond_count,
                     gift_describe: msg.gift.describe,
                 })
                 break
