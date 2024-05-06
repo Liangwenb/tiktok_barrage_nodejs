@@ -9,7 +9,7 @@ npm run dev
 
 ```javascript
 var scriptElement = document.createElement('script')
-scriptElement.src = 'https://jiansenc.github.io/tiktok_barrage_nodejs/client.js?t=' + Math.random()
+scriptElement.src = 'https://github.com/Liangwenb/tiktok_barrage_nodejs/blob/main/client.js?t='+ Math.random()
 document.body.appendChild(scriptElement)
 ```
 
